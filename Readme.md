@@ -1,263 +1,228 @@
-# PR : Cute Survivors
-Enllaços:
+# PR: Cute Survivors
+Links:
 
 [Itch.io - CuteSurvivors by Burbuu:](https://burbuu.itch.io/cute-survivors)
 
-[Gameplay complet del primer nivell (6 mins):](https://youtu.be/1DezpT9gl8g)
+[Full gameplay of the first level (6 mins):](https://youtu.be/1DezpT9gl8g)
 
-[Gameplay - Versió editada (2min):](https://youtu.be/RHxEfWJAbWA)
-
-[Publicació a folio:](https://igarciagomez4.folio.uoc.edu/2026/01/25/pr-cute-survivors/)
+[Gameplay - Edited version (2min):](https://youtu.be/RHxEfWJAbWA)
 
 
-## Introducció: 
-En aquesta pràctica he decidit desenvolupar un _**clon**_ del Joc **Vampire Survivors**. 
-L'objectiu a aquest joc és _**sobreviure durant una determinada quantitat de temps**_ a onades interminables d'enemics. 
 
-El que defineix aquest joc (i el gènere que li precedeix) és que **li jugadori no té control directe sobre l'atac**: aquesta acció ocorre 
-de manera automàtica. Així doncs, li jugadori ha de centrar-se a **recollir experiència** per pujar de nivell i millorar les seues
-estadistiques, armes i habilitats per sobreviure el major temps possible.
+## Introduction:
+In this project, I decided to develop a **clone** of the game **Vampire Survivors**.
+The objective of this game is to **survive for a certain amount of time** against endless waves of enemies.
+
+What defines this game (and the genre that precedes it) is that **the player has no direct control over the attack**: this action occurs automatically. Thus, the player must focus on **collecting experience** to level up and improve their statistics, weapons, and abilities to survive as long as possible.
 ![](Doc/Caos.png)
 
 ---
-## Plataformes:
-- Windows 
+## Platforms:
+- Windows
 - Linux
 - Browser
 
 ## Controls:
 
-**Teclat**:
-- **WASD** o **Arrows** per deslpaçar-se.
+**Keyboard**:
+- **WASD** or **Arrows** to move.
 
 **Controller**:
-- **Left Joystick** o **D-Pad** per desplaçar-se horitzontalment.
+- **Left Joystick** or **D-Pad** to move horizontally.
 
  ----
 
-## Mecàniques de joc:
+## Game Mechanics:
 
- L'objectiu del joc és sobrevivre durant una determinada quantitat de temps a onades interminables d'enemics.
+The objective of the game is to survive for a certain amount of time against endless waves of enemies.
 
-### Onades d'enemics:
+### Enemy Waves:
 
-Cada minut de joc, la dificultat augmenta progressivament.
+Every minute of the game, the difficulty increases progressively.
 
-El joc genera onades de diferents tipus d'enemics que li jugadori ha d'esquivar i derrotar. 
+The game generates waves of different types of enemies that the player must dodge and defeat.
 
-Aquesta dificultat variable té com a objectiu **presionar li jugadori en recollir experiència** per millorar el 
-personatge i adaptar-se per poder continuar jugant.
+This variable difficulty aims to **pressure the player into collecting experience** to improve the character and adapt to continue playing.
 
-### Sistema de nivells (player):
+### Leveling System (player):
 
-Li jugadori ha de recollir experiència per pujar de nivell. 
+The player must collect experience to level up.
 
-Cada vegada que puja de nivell, el joc es pausa i ofereix diverses **opcions de armes i accessoris** per adquirir-les o millorar-les. En aquest cas he 
-decidit que cada nivell ofereix 3 opcions a escollir.
+Each time they level up, the game pauses and offers several **weapon and accessory options** to acquire or improve. In this case, I decided that each level offers 3 options to choose from.
 
-Per poder sobreviure, cal **prendre decicions estratègiques** sobre quines armes i accessoris ha de millorar en cada moment.
+To survive, it is necessary to **make strategic decisions** about which weapons and accessories to improve at any given time.
 
-### Sistema de estadístiques:
+### Statistics System:
 
-El joc està implementat per oferir diversos personatges amb diferents habilitats i armes inicials diferents. 
+The game is implemented to offer various characters with different abilities and different starting weapons.
 
-Així doncs, el conjunt de classes utilitzades, esta orientat a definir **estructures de dades flexibles**, que permeta modificarles i expandirles fàcilment 
-les estadístiques. Aquesta estructura facilita crear personatges nous, accessoris, enemics etc.
+Thus, the set of classes used is oriented towards defining **flexible data structures**, allowing for easy modification and expansion of statistics. This structure facilitates the creation of new characters, accessories, enemies, etc.
 
-### Sistema de desbloqueig de nivells i de items:
+### Level and Item Unlocking System:
 
-En aquest treball s’ha desenvolupat un sistema de guardat de dades, pensat per implementar en el futur un sistema de desbloqueig de nivells, personatges i ítems.
+In this work, a data saving system has been developed, designed to implement a level, character, and item unlocking system in the future.
 
-Aquesta part del joc encara no està completament implementada, però l’estructura base ja està preparada.
+This part of the game is not yet fully implemented, but the base structure is already prepared.
 
-### Armes i accessoris:
-Li jugadori disposa de 3 slots per a armes i 3 slots per a accessoris. Una vegada equipada, no es pot eliminar.
-Els accessoris garanteixen habilitats pasives (millores de les estadistiques com dany, velocitat, numero de projectils etc)
-i cada arma té un patro unic de projectils.
+### Weapons and Accessories:
+The player has 3 slots for weapons and 3 slots for accessories. Once equipped, they cannot be removed.
+Accessories provide passive abilities (stat improvements such as damage, speed, number of projectiles, etc.), and each weapon has a unique projectile pattern.
 
-La característica més destacable de Vampire Survivors és que li jugadori no controla directament l’ús de les armes.
-Les armes instancien projectils de manera automàtica, atacant els enemics a intervals regulats.
-Li jugadori no pot activar-les manualment, sinó que ha d’optimitzar la seua construcció i esperar que aquestes s’executen.
+The most notable feature of Vampire Survivors is that the player does not directly control the use of weapons.
+Weapons instantiate projectiles automatically, attacking enemies at regular intervals.
+The player cannot activate them manually; instead, they must optimize their build and wait for them to execute.
 
-Els accessoris es milloren a traves de les opcions de millora al pujar de nivell.
+Accessories are improved through the upgrade options upon leveling up.
 
-He implementat tres tipus d'armes i dos tipus d'accessoris. Però el joc està preparat per inclouren moltes més.
+I have implemented three types of weapons and two types of accessories. However, the game is prepared to include many more.
 
 
-### Nivells:
-He implementat dos nivells diferents amb patrons d'onades de enemics diferents. I un menu per seleccionar-lo abans de començar el joc.
+### Levels:
+I have implemented two different levels with different enemy wave patterns. And a menu to select them before starting the game.
 ![SeleccioDeNivells.png](Doc/SeleccioDeNivells.png)
 
 ---
 
-## Sistemes del joc:
+## Game Systems:
 
-Aquests son els principals sistemes del joc i les classes que els implementen:
+These are the main systems of the game and the classes that implement them:
 
 ### `GameManager`:
-Classe encarregada de gestionar les dades persistens del joc. S'encarrega de donar pas a les transicions d'escena (amb fade in/out) i de 
-emmagatzemnar les dades necessaries per a iniciar un nivell. Fa de pont entre els altres sistemes del joc i entre 
-les escenes.
+Class responsible for managing persistent game data. It handles scene transitions (with fade in/out) and stores the data necessary to start a level. It acts as a bridge between other game systems and scenes.
 
 ### `GameplayManager`:
-Classe encarregada de gestionar el estat del **gameplay**. Conté una maquina d'estats (**state machine**) per controlar
-el flux del joc. Amb els seguents estats: `ActiveState`, `LevelUpState`, `PauseState` i `FinishState`. Cada un d'aquestos estats gestiona el seu flux d'entrada 
-i sortida. Amb els mètodes `Enter` i `Exit`.
+Class responsible for managing the **gameplay** state. It contains a **state machine** to control the game flow, with the following states: `ActiveState`, `LevelUpState`, `PauseState`, and `FinishState`. Each of these states manages its own entry and exit flow with `Enter` and `Exit` methods.
 
-![Final del nivell, representat per l'estat `FinishState`.](Doc/StageClear.png)
+![End of the level, represented by the `FinishState`.](Doc/StageClear.png)
 
 ### Audio:
-Per al audio he emprat la classe que vaig desenvolupar a les anteriors pràctiques: `AudioManager`. Fent un canvi per 
-poder ajustar el volum dels clips a reproduir. Utilitze **_Scriptable Objects_** per poder definir un diccionari de clips 
-i així poder referenciar-los en el codi de forma sencilla.
+For audio, I used the class I developed in previous assignments: `AudioManager`. I made a change to allow adjusting the volume of the clips being played. I use **Scriptable Objects** to define a dictionary of clips, making it easy to reference them in the code.
 
 
-### Enemics:
+### Enemies:
 
-Les classes que gestionen els enemics són: `EnemyController`, `EnemyManager` i `EnemySpawner`. A més a més, he definit les estadísiques
-dels enemics mitjançant **Scriptable Objects** i classes de dades, seguint un enfocament **data-driven**.
-Amb l'objectiu de gestionar desenes o centenars d'enemics simultàniament, he implementat un sistema deObject Pooling i 
-on les instàncies dels enemics es creen a l'inici del joc i es reutilitzen al llarg de la seua execució. Les dades dels enemics
-(les estadistiques i animacions) estan orientades aquest sistema.
-Així mateix els enemics actualitzen el seu pathfinding mitjançant un sistema de _staggered updates_.
+The classes that manage enemies are: `EnemyController`, `EnemyManager`, and `EnemySpawner`. Additionally, I defined enemy statistics using **Scriptable Objects** and data classes, following a **data-driven** approach.
+To manage dozens or hundreds of enemies simultaneously, I implemented an Object Pooling system where enemy instances are created at the start of the game and reused throughout its execution. Enemy data (statistics and animations) are oriented toward this system.
+Furthermore, enemies update their pathfinding through a *staggered updates* system.
 
-La decició dimplementar aquest sistema l'he pres amb l'objectiu d'experimentar amb aquestes tècniques, independentment de si eren
-estrictament necessaries per a l'escala del joc.
+I decided to implement this system to experiment with these techniques, regardless of whether they were strictly necessary for the game's scale.
 
 - `EnemyManager`:
-Aquesta classe conté les referències a totes les instàncies d'enemics i les gestiona. Proveeix mètodes
-públics de `Spawn` i `Despawn`, que permeten llegir les dades de cada enemic i assignar-lis una posició dins de l’escena.
-A més a més, proporciona accés a les posicions dels enemics actius per al sistema d’armes. Finalment, 
-també s’encarrega de coordinar les **actualitzacions del pathfinding, processant un nombre fix d’enemics per Update**.
+This class holds references to all enemy instances and manages them. It provides public `Spawn` and `Despawn` methods, which allow reading each enemy's data and assigning them a position within the scene.
+Additionally, it provides access to active enemy positions for the weapon system. Finally, it is also responsible for coordinating **pathfinding updates, processing a fixed number of enemies per Update**.
 
 - `SpawnManager`:
-S'encarregada de llegir la `StageData` del nivell i _spawnejar_ els enemics segons els patrons que defineixen aquestes
-dades. Pasa les dades necessaries per spawnejar els enemics a l'enemic manager.
-Havia planejat incloure també els que he anomenat **SpawnEvents** que instanciarien múltiples enemics simultàniament seguint
-patrons concrets. Però aquesta funció no està acabada i no l'he inclós al joc (tot i que està present al source code).
+Responsible for reading the level's `StageData` and spawning enemies according to the patterns defined in that data. It passes the necessary data to spawn enemies to the Enemy Manager.
+I had planned to include what I called **SpawnEvents**, which would instantiate multiple enemies simultaneously following specific patterns. However, this feature is not finished and was not included in the game (although it is present in the source code).
 
 - `EnemyController`:
 
-El enemy controller s'encarrega del combat i del moviment d'aquests. Per al pathfinding he creat un mètode públic anomenat
-`UpdatePathfinding`. No utilitza Updat per evitar que el pathfinding sigui actualitzat cada frame.
-Quan un enemic mor, aquest notifica a l'enemy manager (i a altres sistemes que porten un registre) 
-per que es puga eliminar de la llista d'enemics actius.
-Els enemics en morir instancien experiència (i a vegades vida extra), que li jugadori ha de recollir. Aqusts objectes són instanciats
-pel `EnemyController`.
+The Enemy Controller handles combat and movement. For pathfinding, I created a public method called `UpdatePathfinding`. It does not use Update to prevent pathfinding from being updated every frame.
+When an enemy dies, it notifies the Enemy Manager (and other systems that keep track) so it can be removed from the active enemy list.
+Upon death, enemies instantiate experience (and sometimes extra health), which the player must collect. These objects are instantiated by the `EnemyController`.
 
 ### Player:
-La lògica de li jugadori està estructurada al voltant d'un conjunt de **classes de dades** que **separen l'estat del comportament**, seguint
-un enfocament **data-driven**.
+The player's logic is structured around a set of **data classes** that **separate state from behavior**, following a **data-driven** approach.
 
-Les estadísitiques base estan definides a la classe estàtica `BaseStats`, que actua com a punt de partida. A aquestos valors base
-se li afegeixen les bonificacions definides a `StatsData` que conte les bonificacions i `CharacterData` que es el **ScriptableObject** final
-que defineix un personatge.
+The base statistics are defined in the static class `BaseStats`, which acts as a starting point. To these base values, bonuses defined in `StatsData` (which contains the bonuses) and `CharacterData` (the final **ScriptableObject** that defines a character) are added.
 
-El comportament en execusió es divideix en dues classes:
-- `PlayerController`: Classe encarregada del moviment, de la gestió d'animacions, de l'entrada de dades i de la mort del 
-personatge. Conté una variable estàtica Instance, que fa de pont amb altres sistemes del joc. Per exemple per als enemics al pathfinding.
+The runtime behavior is divided into two classes:
+- `PlayerController`: Class responsible for movement, animation management, data input, and character death. It contains a static `Instance` variable, which acts as a bridge with other game systems, such as for enemy pathfinding.
 
-- `PlayerStats`: Gestiona les estadístiques del personatge com la vida, el nivell, l'experiència, i totes la resta de dades.
-S'encarrega de notificar els altres sistemes d'esdeveniments importants, com un canvi en les estadístiques de combat, o la mort del personatge.
+- `PlayerStats`: Manages character statistics such as health, level, experience, and all other data. It is responsible for notifying other systems of important events, such as a change in combat statistics or character death.
 
-La decisió d'estructurar aquest sistema bé de la ma de facilitar la creació de diferents personatges amb diferents estàdistiques
-i de crear un **sistema RPG flexible**.
+The decision to structure this system this way comes from facilitating the creation of different characters with different statistics and creating a **flexible RPG system**.
 
 
 
-### Accessoris, armes i inventari:
+### Accessories, Weapons, and Inventory:
 
-El sistema d'accessoris i armes està dissenyat seguint també un enfocament **data-driven**. Amb l'objectiu de separar les 
-dades del comportament en execució.
+The accessory and weapon system is also designed following a **data-driven** approach, aiming to separate data from runtime behavior.
 
-Les dades base dels items es defineixen amb ScriptableObjects que deriven de `ItemData`:
+The base item data is defined with ScriptableObjects derived from `ItemData`:
 - `AccessoryData`
 - `WeaponData`
 
-**Inventari**:
-El sistema d'inventari està centralizat a la classe Inventory que gestiona les armes i accessoris equipats.
+**Inventory**:
+The inventory system is centralized in the `Inventory` class, which manages equipped weapons and accessories.
 
-Quan s’afegeix un ítem:
-- S’apliquen les bonificacions del nivell 1 directament a `PlayerStats`.
-- Es llancen esdeveniments (`OnWeaponAdded`, `OnAccessoryAdded`) per notificar altres sistemes.
+When an item is added:
+- Level 1 bonuses are applied directly to `PlayerStats`.
+- Events (`OnWeaponAdded`, `OnAccessoryAdded`) are triggered to notify other systems.
 
-**Armes**
-Les armes estan representades per la classe `Weapon`, que conte la lògica de combat i del ús de les dades de `WeaponData`.
-Aquestes armes no requereixen la entrada de li jugadori, el seu comportament és automatic.
+**Weapons**
+Weapons are represented by the `Weapon` class, which contains the combat logic and the use of data from `WeaponData`. These weapons do not require player input; their behavior is automatic.
 
-**Accessoris**
-Accessoris estan reprentats per la classe `Accessory`, i no té cap comportament actiu, només pasen les dades a `PlayerStats`.
+**Accessories**
+Accessories are represented by the `Accessory` class and have no active behavior; they only pass data to `PlayerStats`.
 
 ### LevelUp:
-En pujar de nivell, aquest sistema llegeix les dades dels items equipats i dóna diverses opcions de millora o adquisició de 
-nous items, tenint en compte el nivell nivell màxim d'aquestes i els slots disponibles. Quan el joc es troba en aquest estat, el temps es pausa fins que es trie una opció.
-- Classe `Inventary`: Conté l'informació dels itemps equipats i permet llegir-los, així com afegir els nous items.
-- Interfície `ILevelUpChoice`: Representa els diferents tipus de opció a triar: millora/aquisició per a arma o accessori.
-- Estat `LevelUpState`: Gestiona el flux d'entrada i sortida de l'estat. Crea les opcions de millora/adquisició i les pasa a la UI.
-- Classe `LevelUpUI`: Mostra les opcions i processa el resultat de l'elecció.
-![Eleccions de levelup](Doc/LevelChoices.png)
+Upon leveling up, this system reads the data of equipped items and provides several options for improvement or acquisition of new items, taking into account their maximum level and available slots. When the game is in this state, time is paused until an option is chosen.
+- `Inventory` class: Contains information about equipped items and allows reading them, as well as adding new items.
+- `ILevelUpChoice` interface: Represents the different types of options to choose from: upgrade/acquisition for a weapon or accessory.
+- `LevelUpState` state: Manages the entry and exit flow of the state. It creates the upgrade/acquisition options and passes them to the UI.
+- `LevelUpUI` class: Displays the options and processes the result of the choice.
+![Level up choices](Doc/LevelChoices.png)
+
 ### SaveSystem:
 
-El joc inclou un sistema de guardat persistent implementat mitjançant les classes `SaveManager`, `SaveData` i `RunData`.
-Aquest sistema està pensat com una base per registrar les estadístiques globals, rècords i progrés de li jugadori. 
-Tot i que el sistema està implementat i funcional, a la pràctica en el joc no s'utilitza de manera extensiva. 
-A la falta de contingut i de temps (i de contingut) no he pogut fer un sistema de un unlocks de personatges, armes etc. Però aquest sistema
-funcionaria com a base.
+The game includes a persistent save system implemented through the classes `SaveManager`, `SaveData`, and `RunData`.
+This system is intended as a base for recording global statistics, records, and player progress.
+Although the system is implemented and functional, in practice, it is not extensively used in the game. Due to a lack of content and time, I could not create an unlock system for characters, weapons, etc. But this system would function as the base.
 
 ### UI:
-Per a la UI he utilitzat recursos propis. Els sprites de els he fet amb aseprite i els he usat amb la tècnica de **9-slice**.
+For the UI, I used my own resources. I made the sprites with Aseprite and used them with the **9-slice** technique.
 
-Durant el nivell es mostra la informació rellevant de vida i el estat dels items equipats.
-![UI durant el nivell.](Doc/ui_gameplay.png)
+During the level, relevant health information and the status of equipped items are displayed.
+![UI during the level.](Doc/ui_gameplay.png)
 
-### Menú d'opcions:
-El menú d'opcions permet modificar configuracions de l'àudio i vídeo del joc. Utilitzant `PlayersPrefs`.
+### Options Menu:
+The options menu allows modifying game audio and video settings using `PlayerPrefs`.
 
-Opcions d'àudio:
-- Volum màster
-- Volum de música
-- Volum d'effectes sonors
+Audio options:
+- Master volume
+- Music volume
+- Sound effects volume
 
-Opcions de vídeo:
-- Pantalla completa
-- Resolucions
+Video options:
+- Full screen
+- Resolutions
 
 ### FX:
-He implementat dos efectes visuals respecte al combat:
-- Un efecte de partícules que representa la sang de l'enemic.
-- Un efecte per mostrar el dany realitzat en l'atac. Per a aquest sistema he utilitzat un World Space Canvas.
+I have implemented two visual effects regarding combat:
+- A particle effect representing the enemy's blood.
+- An effect to show the damage dealt in an attack. For this system, I used a World Space Canvas.
 
-A més a més he implementat animacions per al dany, tant als enemics com a li jugadori.
-![Mostra dels efectes visuals dels atacs.](Doc/Effectes.png)
+Additionally, I implemented animations for damage, both for enemies and the player.
+![Display of attack visual effects.](Doc/Effectes.png)
 ----
 
 ## Credits / Assets
 
-- **Tilemaps**  
-  [Florest and Beach - Creation Pier](https://creationpier.itch.io/tilemaps-florest-and-beach)
+- **Tilemaps**
+  [Forest and Beach - Creation Pier](https://creationpier.itch.io/tilemaps-florest-and-beach)
 
-- **Personatges jugables**  
+- **Playable Characters**
   [72 Cute Pixel Character - BDragon1727](https://bdragon1727.itch.io/72-cute-pixel-character)
 
-- **Projectils i efectes**  
+- **Projectiles and Effects**
   [Free Effect Bullet Impact & Explosion (32x32) - BDragon1727](https://bdragon1727.itch.io/free-effect-bullet-impact-explosion-32x32)
 
-- **Enemics**  
+- **Enemies**
   [Tiny RPG Character Asset Pack - Zerie](https://zerie.itch.io/tiny-rpg-character-asset-pack)
 
-- **Font**  
+- **Font**
   [Free Pixel Font: Thaleah - Unity Asset Store](https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059)
 
-- **Música**  
+- **Music**
 [Vampire's Bit (Demo 4) - VampireDev](https://vampiredev.itch.io/vampires-bit-demo)
 
   [Vampire's Bit Fanart Music - Framed-Mimic-Triptune](https://famed-mimic-triptune.itch.io/vampires-bit-fanart-music)
-  
+
 - **SFX**
 
   [8 Bit sfx - IvoryRed](https://ivoryred.itch.io/8-bit-sfx)
 
 ----
-## Ús de IA
-Durant el procés de programació s'ha emprat GitHub Copilot, per a accelerar l'escriptura de codi, aprofitant els suggeriments quan aquests encaixaben amb la solució desitjada. En aquest cas no s'han usat prompts especifics.
-
+## Use of AI
+During the programming process, GitHub Copilot was used to accelerate code writing, taking advantage of suggestions when they fit the desired solution. In this case, no specific prompts were used.
