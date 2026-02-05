@@ -194,6 +194,7 @@ I have implemented two visual effects regarding combat:
 - An effect to show the damage dealt in an attack. For this system, I used a World Space Canvas.
 
 Additionally, I implemented animations for damage, both for enemies and the player.
+
 ![Display of attack visual effects.](Doc/Effectes.png)
 ----
 
