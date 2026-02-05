@@ -14,6 +14,7 @@ In this project, I decided to develop a **clone** of the game **Vampire Survivor
 The objective of this game is to **survive for a certain amount of time** against endless waves of enemies.
 
 What defines this game (and the genre that precedes it) is that **the player has no direct control over the attack**: this action occurs automatically. Thus, the player must focus on **collecting experience** to level up and improve their statistics, weapons, and abilities to survive as long as possible.
+
 ![](Doc/Caos.png)
 
 ---
@@ -174,6 +175,7 @@ Although the system is implemented and functional, in practice, it is not extens
 For the UI, I used my own resources. I made the sprites with Aseprite and used them with the **9-slice** technique.
 
 During the level, relevant health information and the status of equipped items are displayed.
+
 ![UI during the level.](Doc/ui_gameplay.png)
 
 ### Options Menu:
@@ -218,7 +220,7 @@ Additionally, I implemented animations for damage, both for enemies and the play
 - **Music**
 [Vampire's Bit (Demo 4) - VampireDev](https://vampiredev.itch.io/vampires-bit-demo)
 
-  [Vampire's Bit Fanart Music - Framed-Mimic-Triptune](https://famed-mimic-triptune.itch.io/vampires-bit-fanart-music)
+[Vampire's Bit Fanart Music - Framed-Mimic-Triptune](https://famed-mimic-triptune.itch.io/vampires-bit-fanart-music)
 
 - **SFX**
 
